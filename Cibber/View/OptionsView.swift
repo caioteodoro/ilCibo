@@ -1,59 +1,71 @@
 //
-//  ContentView.swift
+//  OptionsView.swift
 //  Cibber
 //
 //  Created by Caio Teodoro on 08/12/22.
 //
 
 import SwiftUI
-import CoreData
 
-struct ContentView: View {
+struct OptionsView: View {
+    
+    @State private var newFoodSheet = false
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
-
+    
+    @State var itemName = ""
+    
+    
     var body: some View {
+        
         NavigationView {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        
                     } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                        if item.name != nil {
+                            Text(item.name!)
+                        }
+                        if item.type != nil {
+                            Text(item.type!)
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)
             }
             .toolbar {
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    Button("Adicionar") {
+                        newFoodSheet.toggle()
+                    }
+                    .sheet(isPresented: $newFoodSheet) {
+                        NewFoodView()
                     }
                 }
             }
             
-            TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-                Text("Tab Content 1").tabItem {
-                    Image(systemName: "star")
-                    Text("Hoje") }.tag(1)
-                Text("Tab Content 2").tabItem { Text("Opções") }.tag(2)
-            }
+            
             
             Text("Select an item")
         }
+        
     }
-
+    
+    
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
+            newItem.name = itemName
 
             do {
                 try viewContext.save()
@@ -80,6 +92,7 @@ struct ContentView: View {
             }
         }
     }
+    
 }
 
 private let itemFormatter: DateFormatter = {
@@ -89,8 +102,8 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-struct ContentView_Previews: PreviewProvider {
+struct OptionsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        OptionsView()
     }
 }

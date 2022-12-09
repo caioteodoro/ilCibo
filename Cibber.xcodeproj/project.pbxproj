@@ -12,7 +12,11 @@
 		6BB0C6F929429AF30072698C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BB0C6F829429AF30072698C /* Assets.xcassets */; };
 		6BB0C6FC29429AF30072698C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BB0C6FB29429AF30072698C /* Preview Assets.xcassets */; };
 		6BB0C6FE29429AF30072698C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C6FD29429AF30072698C /* Persistence.swift */; };
-		6BB0C70129429AF30072698C /* Cibber.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C6FF29429AF30072698C /* Cibber.xcdatamodeld */; };
+		6BB0C70A2942A31B0072698C /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C7092942A31B0072698C /* TodayView.swift */; };
+		6BB0C70C2942A4130072698C /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C70B2942A4130072698C /* OptionsView.swift */; };
+		6BB0C70E2942AA190072698C /* FoodTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C70D2942AA190072698C /* FoodTypes.swift */; };
+		6BB0C7142942AE2A0072698C /* Cibber.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C7122942AE2A0072698C /* Cibber.xcdatamodeld */; };
+		6BB0C7172942B3380072698C /* NewFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C7162942B3380072698C /* NewFoodView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +26,11 @@
 		6BB0C6F829429AF30072698C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BB0C6FB29429AF30072698C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6BB0C6FD29429AF30072698C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		6BB0C70029429AF30072698C /* Cibber.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cibber.xcdatamodel; sourceTree = "<group>"; };
+		6BB0C7092942A31B0072698C /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		6BB0C70B2942A4130072698C /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		6BB0C70D2942AA190072698C /* FoodTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTypes.swift; sourceTree = "<group>"; };
+		6BB0C7132942AE2A0072698C /* Cibber.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cibber.xcdatamodel; sourceTree = "<group>"; };
+		6BB0C7162942B3380072698C /* NewFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFoodView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +63,13 @@
 		6BB0C6F329429AF00072698C /* Cibber */ = {
 			isa = PBXGroup;
 			children = (
+				6BB0C7152942AF3D0072698C /* View */,
 				6BB0C6F429429AF00072698C /* CibberApp.swift */,
-				6BB0C6F629429AF00072698C /* ContentView.swift */,
 				6BB0C6F829429AF30072698C /* Assets.xcassets */,
 				6BB0C6FD29429AF30072698C /* Persistence.swift */,
-				6BB0C6FF29429AF30072698C /* Cibber.xcdatamodeld */,
+				6BB0C7122942AE2A0072698C /* Cibber.xcdatamodeld */,
 				6BB0C6FA29429AF30072698C /* Preview Content */,
+				6BB0C70D2942AA190072698C /* FoodTypes.swift */,
 			);
 			path = Cibber;
 			sourceTree = "<group>";
@@ -71,6 +80,17 @@
 				6BB0C6FB29429AF30072698C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6BB0C7152942AF3D0072698C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BB0C6F629429AF00072698C /* ContentView.swift */,
+				6BB0C7092942A31B0072698C /* TodayView.swift */,
+				6BB0C70B2942A4130072698C /* OptionsView.swift */,
+				6BB0C7162942B3380072698C /* NewFoodView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +163,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BB0C7142942AE2A0072698C /* Cibber.xcdatamodeld in Sources */,
+				6BB0C7172942B3380072698C /* NewFoodView.swift in Sources */,
 				6BB0C6FE29429AF30072698C /* Persistence.swift in Sources */,
+				6BB0C70E2942AA190072698C /* FoodTypes.swift in Sources */,
 				6BB0C6F729429AF00072698C /* ContentView.swift in Sources */,
-				6BB0C70129429AF30072698C /* Cibber.xcdatamodeld in Sources */,
+				6BB0C70C2942A4130072698C /* OptionsView.swift in Sources */,
+				6BB0C70A2942A31B0072698C /* TodayView.swift in Sources */,
 				6BB0C6F529429AF00072698C /* CibberApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,12 +375,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6BB0C6FF29429AF30072698C /* Cibber.xcdatamodeld */ = {
+		6BB0C7122942AE2A0072698C /* Cibber.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6BB0C70029429AF30072698C /* Cibber.xcdatamodel */,
+				6BB0C7132942AE2A0072698C /* Cibber.xcdatamodel */,
 			);
-			currentVersion = 6BB0C70029429AF30072698C /* Cibber.xcdatamodel */;
+			currentVersion = 6BB0C7132942AE2A0072698C /* Cibber.xcdatamodel */;
 			path = Cibber.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

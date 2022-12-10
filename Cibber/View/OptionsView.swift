@@ -19,22 +19,15 @@ struct OptionsView: View {
     
     @State var itemName = ""
     
-    
     var body: some View {
         
         NavigationView {
             List {
                 ForEach(items) { item in
-                    NavigationLink {
-                        
-                    } label: {
-                        if item.name != nil {
-                            Text(item.name!)
-                        }
-                        if item.type != nil {
-                            Text(item.type!)
-                        }
-                    }
+                    
+                    NavigationLink (destination: Text("Entrou"), label: {
+                        FoodCell(itemName: item.name ?? "", itemType: item.type ?? "")
+                    })
                 }
                 .onDelete(perform: deleteItems)
             }
@@ -44,8 +37,10 @@ struct OptionsView: View {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button("Adicionar") {
+                    Button {
                         newFoodSheet.toggle()
+                    } label:  {
+                        Label("Add", systemImage: "plus")
                     }
                     .sheet(isPresented: $newFoodSheet) {
                         NewFoodView()
@@ -60,23 +55,6 @@ struct OptionsView: View {
         
     }
     
-    
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-            newItem.name = itemName
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {

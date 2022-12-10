@@ -17,6 +17,8 @@ struct NewFoodView: View {
     @State var itemTypeLabel = "Selecione o tipo"
     
     var body: some View {
+        
+        
         VStack {
             
             TextField("Digite o nome aqui", text: self.$itemName)
@@ -63,6 +65,7 @@ struct NewFoodView: View {
         .lineSpacing(20)
         .padding(24)
     }
+    
     
     private func addItem() {
         withAnimation {

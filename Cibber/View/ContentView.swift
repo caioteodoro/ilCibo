@@ -10,10 +10,10 @@ import CoreData
 
 struct ContentView: View {
     
-
+    @State var selectedView = 1
     var body: some View {
         
-        TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+        TabView(selection: $selectedView) {
             
             TodayView().tabItem {
                 Image(systemName: "calendar.circle")

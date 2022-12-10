@@ -17,6 +17,8 @@
 		6BB0C70E2942AA190072698C /* FoodTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C70D2942AA190072698C /* FoodTypes.swift */; };
 		6BB0C7142942AE2A0072698C /* Cibber.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C7122942AE2A0072698C /* Cibber.xcdatamodeld */; };
 		6BB0C7172942B3380072698C /* NewFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C7162942B3380072698C /* NewFoodView.swift */; };
+		6BB0C7192943EF450072698C /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C7182943EF450072698C /* FoodCell.swift */; };
+		6BB0C71B2943FDDE0072698C /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C71A2943FDDE0072698C /* FoodItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		6BB0C70D2942AA190072698C /* FoodTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTypes.swift; sourceTree = "<group>"; };
 		6BB0C7132942AE2A0072698C /* Cibber.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cibber.xcdatamodel; sourceTree = "<group>"; };
 		6BB0C7162942B3380072698C /* NewFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFoodView.swift; sourceTree = "<group>"; };
+		6BB0C7182943EF450072698C /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		6BB0C71A2943FDDE0072698C /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +68,14 @@
 			isa = PBXGroup;
 			children = (
 				6BB0C7152942AF3D0072698C /* View */,
+				6BB0C7182943EF450072698C /* FoodCell.swift */,
+				6BB0C70D2942AA190072698C /* FoodTypes.swift */,
+				6BB0C71A2943FDDE0072698C /* FoodItem.swift */,
 				6BB0C6F429429AF00072698C /* CibberApp.swift */,
 				6BB0C6F829429AF30072698C /* Assets.xcassets */,
 				6BB0C6FD29429AF30072698C /* Persistence.swift */,
 				6BB0C7122942AE2A0072698C /* Cibber.xcdatamodeld */,
 				6BB0C6FA29429AF30072698C /* Preview Content */,
-				6BB0C70D2942AA190072698C /* FoodTypes.swift */,
 			);
 			path = Cibber;
 			sourceTree = "<group>";
@@ -167,9 +173,11 @@
 				6BB0C7172942B3380072698C /* NewFoodView.swift in Sources */,
 				6BB0C6FE29429AF30072698C /* Persistence.swift in Sources */,
 				6BB0C70E2942AA190072698C /* FoodTypes.swift in Sources */,
+				6BB0C71B2943FDDE0072698C /* FoodItem.swift in Sources */,
 				6BB0C6F729429AF00072698C /* ContentView.swift in Sources */,
 				6BB0C70C2942A4130072698C /* OptionsView.swift in Sources */,
 				6BB0C70A2942A31B0072698C /* TodayView.swift in Sources */,
+				6BB0C7192943EF450072698C /* FoodCell.swift in Sources */,
 				6BB0C6F529429AF00072698C /* CibberApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

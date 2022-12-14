@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B343A9929496B3800A268F6 /* TodaysChoicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B343A9829496B3800A268F6 /* TodaysChoicesCell.swift */; };
 		6B76C39F2947FF95000552D4 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B76C39E2947FF95000552D4 /* CustomColors.swift */; };
 		6BB0C6F529429AF00072698C /* CibberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C6F429429AF00072698C /* CibberApp.swift */; };
 		6BB0C6F729429AF00072698C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0C6F629429AF00072698C /* ContentView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B343A9829496B3800A268F6 /* TodaysChoicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysChoicesCell.swift; sourceTree = "<group>"; };
 		6B76C39E2947FF95000552D4 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomColors.swift; path = ../../../../../../Users/teodoro/Downloads/CustomColors.swift; sourceTree = "<group>"; };
 		6BB0C6F129429AF00072698C /* Cibber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cibber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB0C6F429429AF00072698C /* CibberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CibberApp.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B343A9729496B0300A268F6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6B343A9829496B3800A268F6 /* TodaysChoicesCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		6B76C39D2947FF6C000552D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		6BB0C7152942AF3D0072698C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B343A9729496B0300A268F6 /* Cells */,
 				6BB0C6F629429AF00072698C /* ContentView.swift */,
 				6BB0C7092942A31B0072698C /* TodayView.swift */,
 				6BB0C70B2942A4130072698C /* ListWithAllOptionsView.swift */,
@@ -180,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B343A9929496B3800A268F6 /* TodaysChoicesCell.swift in Sources */,
 				6BB0C7142942AE2A0072698C /* Cibber.xcdatamodeld in Sources */,
 				6BB0C7172942B3380072698C /* NewFoodView.swift in Sources */,
 				6BB0C6FE29429AF30072698C /* Persistence.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FoodTypes {
+enum FoodTypes: CaseIterable {
     case carbo
     case protein
     case salad

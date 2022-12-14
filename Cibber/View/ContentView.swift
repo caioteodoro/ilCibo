@@ -19,7 +19,7 @@ struct ContentView: View {
                 Image(systemName: "calendar.circle")
                 Text("Hoje") }.tag(1)
             
-            OptionsView().tabItem {
+            ListWithAllOptionsView().tabItem {
                 Image(systemName: "fork.knife.circle")
                 Text("Opções") }.tag(2)
         }

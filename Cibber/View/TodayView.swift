@@ -22,13 +22,43 @@ struct TodayView: View {
     var body: some View {
         
         VStack(spacing: 20){
-            Text(selectedProtein.name)
+            
+            VStack (alignment: .leading) {
+                
+                Text("")
+                    .frame(width: 160)
+                    .padding()
+                    .overlay(
+                     RoundedRectangle(cornerRadius: 16)
+                        .stroke(.blue, lineWidth: 4)
+                    )
+                VStack {
+                    Text("Proteína")
+                        .foregroundColor(.blue)
+                        .font(.system(size: 14, weight: .semibold))
+                        .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
+                }
+                .background(.white)
+                .padding(EdgeInsets(top: -64, leading: 16, bottom: 0, trailing: 16))
+                
+                Text(selectedProtein.name)
+                    .frame(width: 160)
+                    .padding(EdgeInsets(top: -53, leading: 16, bottom: 0, trailing: 0))
+
+            }
+            
+            
             Text(selectedSalad.name)
             Text(selectedGreenery.name)
             Text(selectedCarbo.name)
-            Button("Sortear") {
+            Button("Cibbo di oggi!") {
                 raffleItems()
             }
+            .frame(width: 200, height: 40)
+            .background(Color(uiColor: .pastelBlue))
+            .tint(.white)
+            .cornerRadius(12)
+            
         }
         
         
@@ -77,8 +107,6 @@ struct TodayView: View {
         if !allSalads.isEmpty {
             self.selectedSalad = allSalads.randomElement()!
         }
-        
-        let _ = print("aaaa")
         
     }
     

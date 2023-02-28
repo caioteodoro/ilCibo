@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  ilCibo
+
+  Created by Caio Teodoro on 28/02/23.
+  
+*/
+
+"options" = "Options";
+"today" = "Today";
+
+"vegetable" = "Vegetable";
+"carb" = "Carb";
+"protein" = "Protein";
+"salad" = "Salad";
+
+"vegetables" = "Vegetables";
+"carbs" = "Carbs";
+"proteins" = "Proteins";
+"salads" = "Salads";
+
+"select_type" = "Select type";
+"add" = "Add";
+"type_name_here" = "Type name here";
+"select" = "Select";
+"shuffle" = "Shuffle";
+"remove" = "Remove";
